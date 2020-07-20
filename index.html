@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The world’s leading software development platform · GitHub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/svg"
+      href="images/fluidicon.png"
+    />
+  </head>
+
+  <body style="overflow-x: hidden;">
+    <!-- Alert user about the website -->
+    <div class="alert alert-danger alert-dismissible mb-0" role="alert">
+      <button class="close" data-dismiss="alert">x</button>
+      This is a simple clone of <a href="github.com">Github</a> and not the
+      official Github website.
+    </div>
+
+    <!-- Navbar starts -->
+    <nav class="navbar navbar-expand-lg bg-black">
+      <a class="navbar-brand" href="#">
+        <img src="images/fluidicon.png" width="50" height="50" alt="" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+      >
+        <span style="color: #fff;" class="fa fa-bars"></span>
+      </button>
+
+      <div class="collapse navbar-collapse bg-black" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Why GitHub?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Enterprise</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Explore
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Marketplace</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <!-- <img src="images/search-key-slash.svg"> -->
+            <input
+              class="form-control search mr-sm-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link mx-1" href="#">Sign in</a>
+          </li>
+
+          <li class="nav-item">
+            <button
+              onClick="sendNotification('Button', 'Clicked', 'f')"
+              class="btn btn-outline-light my-2 my-sm-0"
+              type="submit"
+            >
+              Sign up
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- End navbar -->
+
+    <!-- Introduction section -->
+    <div
+      class="container-fluid pb-5 bg-dark hero-background"
+    >
+      <div class="row">
+        <div class="col-xs-12 col-md-6 my-auto" style="padding-top: 60px;">
+          <h1 class="text-white hero-text" style="font-size: 50px;">
+            Built for developers
+          </h1>
+          <p class="text-white hero-text" style="font-size: 20px; font-weight: 400;">
+            GitHub is a development platform inspired by the way you work. From
+            open source to business, you can host and review code, manage
+            projects, and build software alongside 40 million developers.
+          </p>
+        </div>
+
+        <div class="col-xs-6 col-md-6 hidden-xs">
+          <form class="bg-light rounded mx-auto w-75 mt-5 py-4">
+            <div class="form-group text-dark mx-4">
+              <label for="name">Username</label>
+              <input type="email" class="form-control" id="name" />
+            </div>
+
+            <div class="form-group text-dark mx-4">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" />
+            </div>
+
+            <div class="form-group text-dark mx-4">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" />
+              <small id="passwordHelp" class="form-text text-muted"
+                >Make sure it's at least 15 characters OR at least 8 characters
+                including a number and a lowercase letter. Learn more.</small
+              >
+            </div>
+
+            <div class="form-group text-dark mx-4">
+              <button
+                type="submit"
+                class="form-control btn btn-success h-50 py-3"
+              >
+                Sign up for GitHub
+              </button>
+              <small id="passwordHelp" class="form-text text-muted mt-4 pl-3"
+                >By clicking “Sign up for GitHub”, you agree to our Terms of
+                Service and Privacy Statement. We’ll occasionally send you
+                account related emails.</small
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row mx-2 shadow py-5">
+        <div class="col-md-4 px-5 git-enter">
+          <h3 class="">Get started with GitHub Enterprise</h3>
+          <p style="font-size: 18px;">Take collaboration to the next level with security and administrative features built for teams.</p>
+        </div>
+
+        <div class="col-md-4 text-center pt-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 48 49" fill="none" class="mb-2">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M21.6797 36.9274V34.3863C21.6797 34.3863 21.6724 33.7008 22.0494 33.1215C21.5238 33.0825 18.21 32.751 18.21 28.8196C18.21 27.3001 19.1252 26.3431 19.1252 26.3431C19.1252 26.3431 18.8805 25.4767 18.9788 24.4822C19.1095 23.1602 21.5564 24.6609 21.5564 24.6609C21.5564 24.6609 23.471 23.9548 26.281 24.6609C26.5293 24.3575 28.7146 22.9573 28.9395 24.3929C29.009 24.8369 28.8458 26.3431 28.8458 26.3431C28.8458 26.3431 29.6206 27.1288 29.626 28.8442C29.6369 32.2357 25.8261 33.1215 25.8261 33.1215C25.8261 33.1215 26.1856 33.7757 26.172 34.3863C26.1585 34.997 26.172 37 26.172 37C26.172 37 29.8169 35.8847 31.5674 33.0498C32.4044 31.6944 33 30.1179 33 28.1846C33 25.2995 31.8249 23.2014 30.5001 21.7971C28.7136 19.9033 26.2658 19 24 19C21.7525 19 19.2387 19.9239 17.4121 21.8971C16.0278 23.3925 15 25.507 15 28.1846C15 30.2112 15.7011 32.1298 16.7732 33.5648C18.6151 36.0301 21.6797 36.9274 21.6797 36.9274Z" stroke="#2088FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M11 48H3C1.89543 48 1 47.1046 1 46V20C1 18.8954 1.89543 18 3 18H6L11 18" stroke="#79B8FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M5.01172 23H10.0117" stroke="#79B8FF" stroke-width="2" stroke-linecap="round"></path>
+            <path d="M5.01367 28H10.0137" stroke="#79B8FF" stroke-width="2" stroke-linecap="round"></path>
+            <path d="M34 36.9989C34 36.4466 33.5523 35.9989 33 35.9989C32.4477 35.9989 32 36.4466 32 36.9989H34ZM33 48V49C33.5523 49 34 48.5523 34 48H33ZM27 48H26C26 48.5523 26.4477 49 27 49V48ZM27 44.8636H28C28 44.3114 27.5523 43.8636 27 43.8636V44.8636ZM21 44.8636V43.8636C20.4477 43.8636 20 44.3114 20 44.8636H21ZM21 48V49C21.5523 49 22 48.5523 22 48H21ZM15 48H14C14 48.5523 14.4477 49 15 49V48ZM16 37.0243C16 36.472 15.5523 36.0243 15 36.0243C14.4477 36.0243 14 36.472 14 37.0243H16ZM14 19.0122C14 19.5645 14.4477 20.0122 15 20.0122C15.5523 20.0122 16 19.5645 16 19.0122H14ZM18 9.22727L18.4262 10.1319C18.4447 10.1232 18.463 10.1139 18.4809 10.104L18 9.22727ZM33 1H34C34 0.646647 33.8135 0.319526 33.5095 0.139506C33.2054 -0.0405132 32.8289 -0.0467031 32.5191 0.123224L33 1ZM32 19.0219C32 19.5741 32.4477 20.0219 33 20.0219C33.5523 20.0219 34 19.5741 34 19.0219H32ZM32 36.9989V48H34V36.9989H32ZM33 47H27V49H33V47ZM28 48V44.8636H26V48H28ZM27 43.8636H21V45.8636H27V43.8636ZM20 44.8636V48H22V44.8636H20ZM21 47H15V49H21V47ZM16 48V37.0243H14V48H16ZM16 19.0122V14.4545H14V19.0122H16ZM16 14.4545C16 12.4615 17.1989 10.7101 18.4262 10.1319L17.5738 8.32265C15.5679 9.2677 14 11.7773 14 14.4545H16ZM18.4809 10.104L33.4809 1.87678L32.5191 0.123224L17.5191 8.3505L18.4809 10.104ZM32 1V19.0219H34V1H32Z" fill="#2088FF"></path>
+            <path d="M36 21L37.0597 20.2052L40 18L47 24V46C47 47.1046 46.1046 48 45 48H37" stroke="#79B8FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M38.0137 30.0078H43.0137" stroke="#79B8FF" stroke-width="2" stroke-linecap="round"></path>
+            <path d="M38.0156 35.0078H43.0156" stroke="#79B8FF" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+          <h5>Enterprise</h5>
+          <p>Deploy to your environment or the cloud.</p>
+          <button class="btn btn-primary" style="height: 9vh;">Start a free trial</button>
+        </div>
+
+        <div class="col-md-4 text-center pt-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 76 76" fill="none" class="mb-2">
+            <path d="M10 8.572c-.79 0-1.429.64-1.429 1.429v25.714c0 .789.64 1.428 1.429 1.428h8.571c.282 0 .558.084.792.24l6.35 4.234v-3.045c0-.789.64-1.429 1.43-1.429h4.285a1.429 1.429 0 0 1 0 2.858h-2.857v4.285a1.429 1.429 0 0 1-2.221 1.189L18.138 40H10a4.286 4.286 0 0 1-4.286-4.286V10A4.286 4.286 0 0 1 10 5.715h47.142A4.286 4.286 0 0 1 61.428 10v14.285a1.429 1.429 0 0 1-2.857 0V10.001c0-.79-.64-1.429-1.429-1.429H10zM44.77 37.915a14.238 14.238 0 0 1 9.515-3.629c3.662 0 7.005 1.38 9.532 3.645a1.429 1.429 0 0 1-1.907 2.128 11.38 11.38 0 0 0-7.625-2.916 11.381 11.381 0 0 0-7.61 2.903 1.428 1.428 0 1 1-1.904-2.13zM67.05 64.707a1.428 1.428 0 0 1 2.017.105c1.982 2.2 3.334 4.873 3.774 7.81a1.429 1.429 0 0 1-2.826.423c-.348-2.33-1.427-4.496-3.07-6.32a1.429 1.429 0 0 1 .105-2.017zM63.947 55.745c.528.586.481 1.49-.105 2.017a14.238 14.238 0 0 1-9.557 3.667h-.003c-.914 0-1.812.069-2.685.2-6.79 1.022-12.035 5.786-13.048 11.48a1.429 1.429 0 0 1-2.813-.502c1.059-5.948 5.707-10.788 11.755-12.894a14.324 14.324 0 0 1-2.726-1.918 1.429 1.429 0 0 1 1.905-2.13 11.38 11.38 0 0 0 7.614 2.907h.001c2.94 0 5.619-1.109 7.645-2.933a1.428 1.428 0 0 1 2.017.105z" fill="#79B8FF"></path><path d="M36.168 14.326a1.429 1.429 0 0 1 .956 1.78L32.817 30.43a1.428 1.428 0 1 1-2.736-.823l4.307-14.324a1.429 1.429 0 0 1 1.78-.957zM25.296 17.562a1.429 1.429 0 0 1 0 2.02l-3.276 3.276 3.276 3.275a1.429 1.429 0 1 1-2.02 2.02l-4.286-4.285a1.429 1.429 0 0 1 0-2.02l4.285-4.286a1.429 1.429 0 0 1 2.02 0z" fill="#2188FF"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M40.28 40.01c.752.048 1.548.277 2.075.984.49.656.498 1.451.502 1.808v.06c-.003 1.02-.002 2.65 0 4.291v.012c.001 1.598.003 3.206 0 4.268v.044c-.001.174-.002.438-.036.695-.037.29-.128.693-.393 1.08-.593.863-1.584 1.037-2.431 1.034-3.792-.002-7.14-3.178-7.14-7.143 0-2.798 1.668-5.203 3.982-6.377 2.6-7.114 9.429-12.194 17.447-12.194 8.017 0 14.845 5.08 17.447 12.194 2.314 1.174 3.981 3.58 3.981 6.377 0 2.798-1.667 5.203-3.981 6.377-2.293 6.271-7.869 10.96-14.65 11.985A2.144 2.144 0 0 1 52.857 65v-.928c0-.67.544-1.215 1.214-1.215h.215c.223 0 .446-.004.667-.013 5.824-.243 10.832-3.658 13.337-8.564-.777-.037-1.62-.26-2.146-1.028a2.437 2.437 0 0 1-.394-1.08 5.674 5.674 0 0 1-.036-.695v-.044c-.003-1.064-.001-2.676 0-4.278.002-1.641.004-3.272 0-4.293v-.06c.005-.357.013-1.152.502-1.808.527-.707 1.323-.936 2.076-.984-2.6-5.094-7.897-8.581-14.007-8.581-6.109 0-11.406 3.487-14.006 8.581zm-.29 2.848c-2.253.005-4.276 1.943-4.276 4.285 0 2.346 2.029 4.286 4.286 4.286v-.006c.003-.99.001-2.617 0-4.242v-.005c-.002-1.674-.003-3.344 0-4.312v-.006h-.01zm28.591 0c2.254.005 4.276 1.943 4.276 4.285 0 2.346-2.028 4.286-4.286 4.286v-.006c-.002-.99-.001-2.62 0-4.247v-.012c.002-1.67.003-3.334 0-4.3v-.006h.01z" fill="#2188FF"></path><path d="M41.847 19.582a1.429 1.429 0 0 1 2.02-2.02l4.286 4.285a1.429 1.429 0 0 1 0 2.02l-4.286 4.286a1.429 1.429 0 0 1-2.02-2.02l3.275-3.275-3.275-3.276z" fill="#2188FF"></path>
+          </svg>
+          <h5>Talk to us</h5>
+          <p>Need help?</p>
+          <button class="btn btn-outline-primary" style="height: 9vh;">Contact Sales →</button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Free for teams section -->
+    <div class="container px-3">
+    <div class="row text-white mx-2 py-5 my-5 free-for-teams-section rounded">
+      <div class="col-md-1">
+        <p class="text-center border border-success text-success" style="width: 70px; border-radius: 20px;"><strong>NEW</strong></p>        
+      </div>
+
+      <div class="col-md-8 w-100">
+        <h4>GitHub is now free for teams</h4>
+        <h6>GitHub Free gives teams private repositories with unlimited collaborators at no cost. GitHub Team is now reduced to $4 per user/month.</h6>
+      </div>
+
+      <div class="col-md-3"><button class="w-100 btn btn-primary my-3 btn-h-25">Try github Free</button></div>
+    </div>
+     </div>
+
+
+
+    <div class="container-fluid">
+      <div class="row my-5">
+        <div class="col-12">
+          <p class="text-center display-6 dim">
+            More than 2.1 million businesses and organizations use GitHub
+          </p>
+        </div>
+      </div>
+
+
+      <div class="d-flex flex-wrap grayscale text-center justify-content-center">
+        <div class="mx-4 mt-2">
+          <img src="images/airbnb.png" class="logo-img-sm" alt="Airbnb" />
+        </div>
+        <div class="mx-4 mt-2">
+          <img src="images/sap.png" class="logo-img-sm" alt="SAP" />
+        </div>
+        <div class="mx-4 mt-2">
+          <img src="images/ibm.png" class="logo-img-sm" alt="IBM" />
+        </div>
+        <div class="mx-4 mt-2">
+          <img src="images/google.png" class="logo-img-sm-g" alt="Google" />
+        </div>
+        <div class="mx-4 mt-2">
+          <img src="images/paypal.png" class="logo-img-sm" alt="Paypal" />
+        </div>
+        <div class="mx-4 mt-2">
+          <img src="images/bloomberg.png" class="logo-img-sm" alt="Bloomberg" />
+        </div>
+      </div>
+
+      <div class="d-flex flex-wrap grayscale mt-3 justify-content-center">
+        <div class="mx-4 mt-2 text-center">
+          <img src="images/spotify.png" class="logo-img-sm" alt="Spotify" />
+        </div>
+        <div class="mx-4 mt-2 text-center">
+          <img src="images/swift.png" class="logo-img-sm-g" alt="Swift" />
+        </div>
+        <div class="mx-4 mt-2 text-center">
+          <img src="images/facebook.png" class="logo-img-sm-g" alt="Facebook" />
+        </div>
+        <div class="mx-4 mt-2 text-center">
+          <img src="images/node.png" class="logo-img-sm" alt="NodeJs" />
+        </div>
+        <div class="mx-4 mt-2 text-center">
+          <img src="images/nasa.png" class="logo-img-sm-g" alt="Nasa" />
+        </div>
+        <div class="mx-4 mt-2 text-center">
+          <img src="images/walmart.png" class="logo-img-sm" alt="Walmart" />
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Github for teams section -->
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-12 text-center">
+          <p class="text-center">Github for teams</p>
+          <h2 class="text-center">A better way to work together</h2>
+          <h5 class="text-center dim">
+            GitHub brings teams together to work through problems, move ideas<br />
+            forward, and learn from each other along the way.
+          </h5>
+          <button class="btn btn-outline-primary mt-4 btn-h-25">
+            Sign up your team <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+
+          </button>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-xs-6 col-md-7">
+          <img src="images/home-illo-team.svg" />
+        </div>
+
+        <div class="col-xs-6 col-md-5">
+          <div class="row">
+            <div class="col-xs-6 mx-3 col-md-12 boxed-card">
+              <p class="text-left display-5 f-18">Write better code</p>
+              <p class="text-left f-14">
+                Collaboration makes perfect. The conversations and code reviews
+                that happen in pull requests help your team share the weight of
+                your work and improve the software you build. <a href="#" class="text-underline">Learn about code
+                review.</a>
+              </p>
+            </div>
+
+            <div class="col-xs-6 mx-3 col-md-12 boxed-card">
+              <p class="text-left display-5 f-18">Manage your chaos</p>
+              <p class="text-left f-14">
+                Take a deep breath. On GitHub, project management happens in
+                issues and project boards, right alongside your code. All you
+                have to do is mention a teammate to get them involved. <a href="#" class="text-underline">Learn
+                about project management.</a>
+              </p>
+            </div>
+
+            <div class="col-xs-6 mx-3 col-md-12 boxed-card">
+              <p class="text-left display-5 f-18">Find the right tools</p>
+              <p class="text-left f-14">
+                Browse and buy apps from GitHub Marketplace with your GitHub
+                account. Find the tools you like or discover new favorites—then
+                start using them in minutes. <a href="#" class="text-underline">Learn about integrations.</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row mt-5">
+        <div class="col-12 px-5 text-center">
+          <p class="text-center" style="font-size: 20px;">
+            See how the world's leading companies use GitHub Enterprise.
+          </p>
+          <h2 class="text-center">A better way to work together</h2>
+          <h5 class="text-center dim">
+            GitHub brings teams together to work through problems, move ideas<br />
+            forward, and learn from each other along the way.
+          </h5>
+          <button class="btn btn-outline-primary mt-4 btn-h-25">
+            Sign up your team
+          </button>
+        </div>
+      </div>
+
+      <div class="row card-deck mt-5 mx-1">
+        <div class="col-lg-3 col-md-3 col-sm-6 card pt-3">
+          <img src="images/cards/hero1.jpg" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">MGM Resorts International</h5>
+            <p class="card-text">Hospitality</p>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="card-link">Read more</a>
+            <a href="#" class="card-link float-right">Read more</a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-6 card pt-3">
+          <img src="images//cards/hero2.jpg" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">Nationwide</h5>
+            <p class="card-text">Insurance</p>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="card-link">Read more</a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-6 card pt-3">
+          <img src="images/cards/hero3.jpg" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">SAP</h5>
+            <p class="card-text">Business Software</p>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="card-link">Read more</a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-6 card pt-3">
+          <img src="images//cards/hero4.jpg" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">Spotify</h5>
+            <p class="card-text">Technology / Streaming</p>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="card-link">Read more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-12 text-center">
+          <p class="text-center">Security and administration</p>
+          <h2 class="text-center">Your business needs, met</h2>
+          <h5 class="text-center">
+            From flexible hosting to granular access controls, we’ve got your
+            <br />security requirements covered.
+          </h5>
+          <button class="btn btn-outline-primary mt-4 btn-h-25">
+            Learn how GutHub Enterprise works <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="row mt-5 flex-wrap-reverse">
+        <div class="col-xs-6 col-md-6">
+          <div class="row">
+            <h4 class="text-left mx-4 f-18">Code security</h4>
+            <p class="text-left mx-4 f-14">
+              Prevent problems before they happen. Protected branches, signed
+              commits, and required status checks protect your work and help you
+              maintain a high standard for your code.
+            </p>
+          </div>
+
+          <div class="row">
+            <h4 class="text-left mx-4 f-18">Access controlled</h4>
+            <p class="text-left mx-4 f-14">
+              Encourage teams to work together while limiting access to those
+              who need it with granular permissions and authentication through
+              SAML/SSO and LDAP.
+            </p>
+          </div>
+        </div>
+        <div class="col-xs-6 col-md-6">
+          <img
+            class="business-img w-100 o-hidden"
+            src="images/home-illo-business.png"
+          />
+        </div>
+      </div>
+
+      <div class="row mt-5 border cust-w text-left m-auto rounded">
+          <div class="col-2">
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="mr-4" width="64px"><path d="M27 13h-9a1 1 0 0 0 0 2h9a1 1 0 0 0 0-2zm15-1a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1zm4 0a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1zM27 28h-9a1 1 0 0 0 0 2h9a1 1 0 0 0 0-2zm15 3a1 1 0 0 0 1-1v-2a1 1 0 0 0-2 0v2a1 1 0 0 0 1 1zm4 0a1 1 0 0 0 1-1v-2a1 1 0 0 0-2 0v2a1 1 0 0 0 1 1z" fill="#23292f"></path><path d="M50 44h-1a13 13 0 0 0-4.68-9H48a3 3 0 0 0 3-3v-6a3 3 0 0 0-3-3h-5v-3h5a3 3 0 0 0 3-3v-6a3 3 0 0 0-3-3H16a3 3 0 0 0-3 3v6a3 3 0 0 0 3 3h5v3h-5a3 3 0 0 0-3 3v6a3 3 0 0 0 3 3h11.72a13 13 0 0 0-3.79 5.21A7 7 0 0 0 13.28 44 6 6 0 0 0 14 56h36a6 6 0 0 0 0-12zM15 17v-6a1 1 0 0 1 1-1h32a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H16a1 1 0 0 1-1-1zm8 3h18v3H23zm-7 13a1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1h32a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-7a12.9 12.9 0 0 0-10 0H16zm34 21H14a4 4 0 1 1 .09-8 1 1 0 0 0 1-.83 5 5 0 0 1 8.6-2.55 1 1 0 0 0 1.7-.42A11 11 0 0 1 47 45a1 1 0 0 0 1 1h2a4 4 0 0 1 0 8z" fill="#23292f"></path></svg>
+        </div>
+
+        <div class="col-10 px-5">
+          <h5 class="f-16">Hosted where you need it</h5>
+          <p class="f-14">
+            Hosted where you need it Securely and reliably host your work on
+            GitHub using GitHub Enterprise Cloud. Or deploy GitHub Enterprise
+            Server in your own data centers or in a private cloud using Amazon
+            Web Services, Azure, or Google Cloud Platform.
+          </p>
+          <a href="" class="f-14">Compare plans <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+          <a href="" class="d-block f-14" >Contact Sales for more information <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-12 text-center">
+          <p class="text-center">Integrations</p>
+          <h2 class="text-center">Build on GitHub</h2>
+          <p class="text-center">
+            Customize your process with GitHub apps and an intuitive API.
+            Integrate the tools you already use or discover new favorites to
+            create a happier, more efficient way of working.
+          </p>
+          <button class="btn btn-outline-primary mt-4 btn-h-25">
+            Larn about integrations <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="row mt-5 text-center justify-content-center">
+
+        <div class="mx-5 text-center">
+          <img src="images/slackhq.png" class="logo-img-sm mt-3 rounded-circle" />
+        </div>
+
+        <div class="mx-5 mt-4">
+          <img src="images/zenhubio.png" class="logo-img-sm mt-3 rounded-circle" />
+        </div>
+
+        <div class="mx-5 text-center">
+          <img src="images/travis-ci.png" class="logo-img-sm mt-3 rounded-circle" />
+        </div>
+
+        <div class="mx-5 text-center mt-4">
+          <img src="images/atom.png" class="logo-img-sm mt-3 rounded-circle" />
+        </div>
+
+        <div class="mx-5 text-center">
+          <img src="images/circleci.png" class="logo-img-sm mt-3 rounded-circle" />
+        </div>
+
+        <div class="mx-5 text-center mt-4">
+          <img src="images/google (1).png" class="logo-img-sm mt-3 rounded-circle" />
+        </div>
+      </div>
+
+      <div class="row text-center mt-5">
+        <div class="col-12">
+          <p class="text-center dim">
+            Sometimes, there’s more than one tool for the job. Why not try
+            something new?
+          </p>
+          <a href="" class="text-center">Browse GitHub Marketplace <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row text-center mt-5">
+        <div class="col-12">
+          <p class="text-center">Community</p>
+          <h2>Welcome home, developers</h2>
+          <p>
+            GitHub is home to the world’s largest community of developers and
+            their projects...
+          </p>
+        </div>
+      </div>
+
+      <div class="row card-deck my-3 mx-1">
+        <div class="col-lg-3 col-md-3 col-sm-6 card pt-3 pb-0">
+          <img src="images/cards/hero5.jpg" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">Russell Keith-Magee</h5>
+            <p class="card-text">
+              Russell Keith-Magee created BeeWare to fill a gap in his own
+              process. Today, BeeWare is the go-to project for supporting Python
+              on every platform.
+            </p>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="card-link">Read more</a>
+            <a href="#" class="card-link float-right"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-6 card pt-3">
+          <img src="images//cards/hero6.jpg" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">Kris Nova</h5>
+            <p class="card-text">
+              Kris Nova quickly developed a passion for open source software.
+              Now she gets to work on open source tooling at her day job, which
+              includes maintaining Kubernetes Operations (kops).
+            </p>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="card-link">Read more</a>
+            <a href="#" class="card-link float-right"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-6 card pt-3">
+          <img src="images/cards/hero7.jpg" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">Evan You</h5>
+            <p class="card-text">
+              In 2013, Evan You founded Vue, a Javascript framework funded by
+              the community on Patreon. In 2016, Vue reached 2,000,000
+              downloads.
+            </p>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="card-link">Read more</a>
+            <a href="#" class="card-link float-right"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-6 card pt-3">
+          <img src="images/cards/hero8.jpg" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">Jess Frazelle</h5>
+            <p class="card-text">
+              Jess Frazelle works on Kubernetes full-time. Previously she
+              maintained Docker, a software containerization platform used by
+              thousands of teams.
+            </p>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="card-link">Read more</a>
+            <a href="#" class="card-link float-right"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container pb-3">
+      <div class="row mt-3">
+        <div class="col-12 text-center">
+          <p class="text-gray mt-5">
+            ...whether you’re making your first commit or sending a Rover to
+            Mars, there’s room for you here, too.
+          </p>
+        </div>
+      </div>
+
+      <div class="row mt-3 h-100 px-5">
+
+        <div class="col-lg-6 col-md-6 text-center h-100">
+          <div class="row">
+            <div class="col-md-6 mt-3">
+              <div class="circle text-center mx-auto py-5 px-3 text-white">
+                <span class="h1">100M*</span>
+                repositories worldwide
+              </div>
+            </div>
+
+            <div class="col-md-6 mt-3">
+              <div class="circle1 text-center py-5 mx-auto px-3 text-white bg-primary">
+                <span class="h1">50M*</span>
+                developers worldwide
+              </div>
+            </div>
+          </div>
+
+          <div class="row text-center justify-content-center">
+            <div class="col-md-12 text-center mt-3">
+              <div class="circle2 text-center mx-auto text-white">
+                <span class="h1">2.9*</span>
+                businesses & organizations worldwide
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-sm-12 mt-3">
+          <div class="row boxed-card p-3">
+            <div class="col-10">
+              <p class="text-left f-14">
+                GitHub’s users create and maintain influential technologies
+                alongside the world’s largest
+                <span style="color: #a04100;"> open source community.</span>
+              </p>
+            </div>
+            <div class="col-2 py-3"><i class="fa fa-caret-right"></i></div>
+          </div>
+
+          <div class="row boxed-card p-3">
+            <div class="col-10">
+              <p class="text-left f-14">
+                <span style="color: #0366d6;">Developers</span> use GitHub for
+                personal projects, from experimenting with new programming
+                languages to hosting their life’s work.
+              </p>
+            </div>
+            <div class="col-2 py-3"><i class="fa fa-caret-right"></i></div>
+          </div>
+
+          <div class="row boxed-card p-3">
+            <div class="col-10">
+              <p class="text-left f-14">
+                <span style="color: #6f42c1;">Businesses</span> of all sizes use
+                GitHub to support their development process and to securely
+                build software.
+              </p>
+            </div>
+            <div class="col-2 py-3"><i class="fa fa-caret-right"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row bg-dark py-5">
+        <div class="col-12 text-center">
+          <h2 class="text-white mt-5">
+            Get started for free — join the millions of developers already<br />
+            using GitHub to share their code, work together, and build<br />
+            amazing things.
+          </h2>
+        </div>
+
+        <div class="col-12 mt-5">
+
+          <form class="form-inline text-center rounded py-3 justify-content-center">
+
+            <div class="form-group text-white  mx-2">
+              <input
+                type="email"
+                class="form-control"
+                id="name"
+                placeholder="Pick a username"
+              />
+            </div>
+
+            <div class="form-group text-dark mx-2">
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Your email address"
+              />
+            </div>
+
+            <div class="form-group text-dark mx-2">
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                placeholder="Create a password"
+              />
+            </div>
+
+            <div class="form-group text-dark mx-2">
+              <button
+                type="submit"
+                class="form-control btn btn-success"
+              >
+                Sign up for GitHub
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="col-12 text-center mt-3">
+          <small class="mt-5" style="color: #6a737d;"
+            >By clicking “Sign up for GitHub”, you agree to our
+            <span class="text-white">terms of service </span>and<span
+              class="text-white"
+            >
+              privacy statement</span
+            >
+            . We’ll occasionally send you account related emails.</small
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row py-5">
+        <div class="col-md-4">
+          <h3 class="text-dark pl-2 mt-4"><strong>GitHub</strong></h3>
+        </div>
+
+        <div class="d-flex flex-wrap">
+      
+          <div class="col-2 mx-4 mt-4">
+            <a href="#" class="d-block mt-2 text-gray">Product</a>
+            <a href="#" class="d-block mt-2 text-gray">Features</a>
+            <a href="#" class="d-block mt-2 text-gray">Security</a>
+            <a href="#" class="d-block mt-2 text-gray">Team</a>
+            <a href="#" class="d-block mt-2 text-gray">Enterprise</a>
+            <a href="#" class="d-block mt-2 text-gray">Customer stories</a>
+            <a href="#" class="d-block mt-2 text-gray">Pricing</a>
+            <a href="#" class="d-block mt-2 text-gray">Resources</a>
+          </div>
+
+          <div class="col-2 mx-4 mt-4">
+            <a href="#" class="d-block mt-2 text-gray">Platform</a>
+            <a href="#" class="d-block mt-2 text-gray">Developer API</a>
+            <a href="#" class="d-block mt-2 text-gray">Partners</a>
+            <a href="#" class="d-block mt-2 text-gray">Atom</a>
+            <a href="#" class="d-block mt-2 text-gray">Electron</a>
+            <a href="#" class="d-block mt-2 text-gray">GitHub Desktop</a>
+          </div>
+
+          <div class="col-2 mx-4 mt-4">
+            <a href="#" class="d-block mt-2 text-gray">Support</a>
+            <a href="#" class="d-block mt-2 text-gray">Help</a>
+            <a href="#" class="d-block mt-2 text-gray">Community Forum</a>
+            <a href="#" class="d-block mt-2 text-gray">Professional Services</a>
+            <a href="#" class="d-block mt-2 text-gray">Learning Lab</a>
+            <a href="#" class="d-block mt-2 text-gray">Status</a>
+            <a href="#" class="d-block mt-2 text-gray">Contact GitHub</a>
+          </div>
+
+          <div class="col-2 mx-4 mt-4">
+            <a href="#" class="d-block mt-2 text-gray">Company</a>
+            <a href="#" class="d-block mt-2 text-gray">About</a>
+            <a href="#" class="d-block mt-2 text-gray">Blog</a>
+            <a href="#" class="d-block mt-2 text-gray">Careers</a>
+            <a href="#" class="d-block mt-2 text-gray">Press</a>
+            <a href="#" class="d-block mt-2 text-gray">Social Impact</a>
+            <a href="#" class="d-block mt-2 text-gray">Shop</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-3 pl-3 pt-5 flex-wrap-reverse">
+
+        <div class="col-md-6">
+          <p style="font-size: 12px !important;">
+            <span class="pr-3">© 2020 GitHub, Inc.</span>
+            <span class="pr-3">Terms</span>
+            <span class="pr-3">Privacy</span>
+            <span class="pr-3">Site Map</span>
+            <span class="pr-3">What is Git?</span>
+          </p>
+        </div>
+
+        <div class="col-md-6">
+          <div class="social-links">
+            <i class="fa fa-twitter fa-giticon"></i>
+            <i class="fa fa-facebook-square fa-giticon"></i>
+            <i class="fa fa-youtube-play fa-giticon"></i>
+            <i class="fa fa-linkedin fa-giticon"></i>
+            <i class="fa fa-github fa-giticon"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+  </body>
+</html>
